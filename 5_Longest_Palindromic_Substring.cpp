@@ -29,7 +29,9 @@ string longestPalindrome(string s)
             right++;
         }
         if (right-left+1 > palindstring.size())
+        {
             palindstring = s.substr(left, right-left+1);
+        }
     }
     for (int j = 0; j < len-1; j++)
     {
@@ -92,7 +94,7 @@ string longestPalindrome(string s)
 
 int main(int argc, char const *argv[])
 {
-    string s = {"ccc"};
+    string s = {"sbcccba"};
     string palind = longestPalindrome(s);
     cout << palind;
     return 0;

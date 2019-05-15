@@ -54,7 +54,7 @@ vector<string> letterCombinations(string digits)
 
 int main(int argc, char const *argv[])
 {
-    string digits = "29";
+    string digits = "229";
     vector<string> letters = letterCombinations(digits);
     for (int i = 0; i < letters.size(); i++)
     {

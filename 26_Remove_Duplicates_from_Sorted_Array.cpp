@@ -26,8 +26,7 @@ int removeDuplicates(vector<int>& nums)
         if (nums[i] != temp)
         {
             temp = nums[i];
-            nums[newLength] = nums[i];
-            newLength++;
+            nums[newLength++] = nums[i];
         }
     }
     return newLength;

@@ -46,8 +46,8 @@ ListNode* removeNthFromEnd(ListNode* head, int n)
         {
             tmp = tmp->next;
             i++;
-        }
-        if (i == n && tmp == NULL)
+        }//将tmp从temp节点开始往后移动n个节点
+        if (i == n && tmp == NULL)//如果移动n个节点后刚好到尾部，则说明temp就是倒数第n个节点
         {
             prev->next = temp->next;
             break;
@@ -69,7 +69,7 @@ int main(int argc, char const *argv[])
     node4->next = node5;
     node5->next = NULL;
 
-    int n = 5;
+    int n = 2;
     ListNode *list = removeNthFromEnd(node1, n);
 
     while(list != NULL)

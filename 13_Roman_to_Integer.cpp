@@ -22,7 +22,7 @@ int romanToInt(string s)
 {
     /*
         将每个罗马字符所代表的数字保存在map中。
-        如果当前罗马字符比前一个小，证明不能从此字符开始算，直到比前一个字符大才行。
+        如果当前罗马字符比前一个大，证明不能从此字符开始算，直到比前一个字符大才行。
         数字就是当前罗马字符的数字减去前一个罗马字符数字乘2。
     */
 
@@ -32,7 +32,7 @@ int romanToInt(string s)
     {
         int temp = romanToNum[s[i]];
         if (romanToNum[s[i]] > romanToNum[s[i-1]])
-            number = number + temp - 2*romanToNum[s[i-1]];//若使VI，则加上5之后要减去两个1
+            number = number + temp - 2*romanToNum[s[i-1]];//若是IV，则加上5之后要减去两个1
         else
             number += temp;
     }
@@ -41,7 +41,7 @@ int romanToInt(string s)
 
 int main(int argc, char const *argv[])
 {
-    string s = "VI";
+    string s = "IV";
     cout << romanToInt(s);
     return 0;
 }

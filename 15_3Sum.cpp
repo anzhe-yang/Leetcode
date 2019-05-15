@@ -12,7 +12,7 @@ using namespace std;
 vector< vector<int> > threeSum(vector<int>& nums)
 {
     /*  
-        先排序数组，后两个数按照从两边都中间的策略开始找，当满足条件则加入数组。
+        先排序数组，后两个数按照从两边到中间的策略开始找，当满足条件则加入数组。
     */
 
     sort(nums.begin(), nums.end());

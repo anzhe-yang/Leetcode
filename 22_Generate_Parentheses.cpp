@@ -9,21 +9,6 @@
 using namespace std;
 
 vector<string> res;
-void insert(string, int, int);
-vector<string> generateParenthesis(int n)
-{
-    /*
-        利用insert函数做递归操作。
-        若左括号的数量小于n，则s加上一个左括号。
-        若右括号的数量小于左括号，则s加上一个右括号。
-    */
-
-    if (n <= 0)
-        return res;
-    insert("", n, 0);
-    return res;
-}
-
 void insert(string s, int left_need, int right_need)
 {
     if (left_need == 0 && right_need == 0)
@@ -36,6 +21,20 @@ void insert(string s, int left_need, int right_need)
         insert(s+"(", left_need-1, right_need+1);
     if (right_need > 0)
         insert(s+")", left_need, right_need-1);
+}
+
+vector<string> generateParenthesis(int n)
+{
+    /*
+        利用insert函数做递归操作。
+        若左括号的数量小于n，则s加上一个左括号。
+        若右括号的数量小于左括号，则s加上一个右括号。
+    */
+
+    if (n <= 0)
+        return res;
+    insert("", n, 0);
+    return res;
 }
 
 int main(int argc, char const *argv[])

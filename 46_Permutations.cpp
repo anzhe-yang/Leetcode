@@ -8,7 +8,7 @@
 
 using namespace std;
 
-void permute(vector<int>& nums, vector<vector<int>>& res, int i)
+void permute(vector<int>& nums, vector< vector<int> >& res, int i)
 {
     if (i >= nums.size())
     {
@@ -23,7 +23,7 @@ void permute(vector<int>& nums, vector<vector<int>>& res, int i)
     }
 }
 
-vector<vector<int>> permute(vector<int>& nums)
+vector< vector<int> > permute(vector<int>& nums)
 {
     /*
         迭代算法，i为开始的那个元素，即第一个元素，之后循环i加1。
@@ -31,15 +31,17 @@ vector<vector<int>> permute(vector<int>& nums)
         当i大于数组长度时，说明本次循环结束了，该改变第一个元素之后再循环。
     */
    
-    vector<vector<int>> res;
+    vector< vector<int> > res;
     permute(nums, res, 0);
     return res;
 }
 
 int main(int argc, char const *argv[])
 {
-    vector<int> nums{1, 2, 3};
-    vector<vector<int>> res = permute(nums);
+    // vector<int> nums{1, 2, 3};
+    int num[] = {1, 2, 3};
+    vector<int> nums(num, num+3);
+    vector< vector<int> > res = permute(nums);
     for (int i = 0; i < res.size(); i++)
     {
         for (int j = 0; j < res[i].size(); j++)
