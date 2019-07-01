@@ -39,7 +39,7 @@ string convertToTitle(int n)
 
 int main(int argc, char const *argv[])
 {
-    int n = 0;
+    int n = 701;
     cout << convertToTitle(n);
     return 0;
 }
