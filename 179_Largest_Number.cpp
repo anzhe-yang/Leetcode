@@ -17,7 +17,7 @@ string largestNumber(vector<int>& nums)
         举个例子：3，30这两个字符串，3应该在前面，30在后面，那么330>303，所以就这么排好序。
         这样就把字符串排序成题目想要的样子。
         之后把每个字符串按顺序压入res。
-        如果首字符为0，则直接返回0。
+        如果首字符为0，则直接返回字符串0。
     */
     vector<string> num2str;
     for(int num : nums)
