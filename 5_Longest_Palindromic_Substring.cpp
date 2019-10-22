@@ -94,7 +94,7 @@ string longestPalindrome(string s)
 
 int main(int argc, char const *argv[])
 {
-    string s = {"sbcccba"};
+    string s = {"sbcccbad"};
     string palind = longestPalindrome(s);
     cout << palind;
     return 0;
