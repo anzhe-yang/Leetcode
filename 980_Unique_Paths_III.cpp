@@ -33,6 +33,11 @@ int numOfPaths(vector<vector<int>> &grid, int x, int y, int nums) {
 }
 
 int uniquePathsIII(vector<vector<int>>& grid) {
+    /*
+        首先找到起点位置，并记录所有0的个数。
+        然后进行dfs搜索四个方向，看每个方向共有几种路径。
+    */
+
     if (grid.empty() || grid[0].empty()) {
         return 0;
     }
